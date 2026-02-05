@@ -447,7 +447,7 @@ New deprecation(s):
 
 ### Breaking Changes
 
-- **Authentication:** AAD-Pod-Identity and AWS-KIAM auths have been removed ([#5035](https://github.com/kedacore/keda/issues/5035)|[#5085](https://github.com/kedacore/keda/issues/5085))
+- **Authentication**: AAD-Pod-Identity and AWS-KIAM auths have been removed ([#5035](https://github.com/kedacore/keda/issues/5035)|[#5085](https://github.com/kedacore/keda/issues/5085))
 - **Prometheus Scaler**: Remove deprecated field `cortexOrgID` from Prometheus scaler ([#5538](https://github.com/kedacore/keda/issues/5538))
 
 ### New
@@ -522,13 +522,13 @@ Here is an overview of all new **experimental** features:
 
 ### Improvements
 
+- **General**: Add `validations.keda.sh/hpa-ownership` annotation to HPA to disable ownership validation ([#5516](https://github.com/kedacore/keda/issues/5516))
 - **General**: Add active trigger name in ScaledObject's scale out event ([#5577](https://github.com/kedacore/keda/issues/5577))
 - **General**: Add command-line flag in Adapter to allow override of gRPC Authority Header ([#5449](https://github.com/kedacore/keda/issues/5449))
 - **General**: Add GRPC Client and Server metrics ([#5502](https://github.com/kedacore/keda/issues/5502))
 - **General**: Add GRPC Client support for opentelemetry ([#5698](https://github.com/kedacore/keda/issues/5698))
 - **General**: Add OPENTELEMETRY flag in e2e test YAML ([#5375](https://github.com/kedacore/keda/issues/5375))
 - **General**: Add support for cross tenant/cloud authentication when using Azure Workload Identity for TriggerAuthentication ([#5441](https://github.com/kedacore/keda/issues/5441))
-- **General**: Add `validations.keda.sh/hpa-ownership` annotation to HPA to disable ownership validation ([#5516](https://github.com/kedacore/keda/issues/5516))
 - **General**: Improve Prometheus metrics to align with best practices ([#4854](https://github.com/kedacore/keda/issues/4854))
 - **General**: Support csv-format for WATCH_NAMESPACE env var ([#5670](https://github.com/kedacore/keda/issues/5670))
 - **General**: Validate fallback configuration when creating ScaledObjects ([#5515](https://github.com/kedacore/keda/issues/5515))
@@ -853,8 +853,8 @@ New deprecation(s):
 
 - **General**: Add e2e test for external push scaler ([#2698](https://github.com/kedacore/keda/pull/2698))
 - **General**: Automatically scale test clusters in/out to reduce environmental footprint & improve cost-efficiency ([#4456](https://github.com/kedacore/keda/pull/4456))
-- **General**: Bump Golang to 1.20 ([#4517](https://github.com/kedacore/keda/issues/4517))
 - **General**: Bump `kubernetes-sigs/controller-runtime` to v0.15.0 and code alignment ([#4582](https://github.com/kedacore/keda/pull/4582))
+- **General**: Bump Golang to 1.20 ([#4517](https://github.com/kedacore/keda/issues/4517))
 - **General**: Drop a transitive dependency on bou.ke/monkey ([#4364](https://github.com/kedacore/keda/issues/4364))
 - **General**: Fix odd number of arguments passed as key-value pairs for logging ([#4368](https://github.com/kedacore/keda/issues/4368))
 - **General**: Refactor several functions for Status & Conditions handling into pkg util functions ([#2906](https://github.com/kedacore/keda/pull/2906))
@@ -977,7 +977,6 @@ New deprecation(s):
 ### Breaking Changes
 
 - **General**: Change API version of HPA from `autoscaling/v2beta2` to `autoscaling/v2` ([#2462](https://github.com/kedacore/keda/issues/2462))
-- **General**: As per our [support policy](https://github.com/kedacore/governance/blob/main/SUPPORT.md), Kubernetes v1.23 or above is required and support for Kubernetes v1.22 or below was removed ([docs](https://keda.sh/docs/2.9/operate/cluster/#kubernetes-compatibility))
 
 ### New
 
@@ -1008,13 +1007,13 @@ Here is an overview of all new **experimental** features:
 
 ### Improvements
 
-- **General**: Add explicit `seccompProfile` type to `securityContext` config ([#3561](https://github.com/kedacore/keda/issues/3561))
 - **General**: Add `Min` column to ScaledJob visualization ([#3689](https://github.com/kedacore/keda/issues/3689))
+- **General**: Add explicit `seccompProfile` type to `securityContext` config ([#3561](https://github.com/kedacore/keda/issues/3561))
 - **General**: Disable response compression for k8s restAPI in client-go ([#3863](https://github.com/kedacore/keda/issues/3863))
 - **General**: Improve the function used to normalize metric names ([#3789](https://github.com/kedacore/keda/issues/3789))
+- **General**: Support "Restrict Secret Access" to mitigate the security risk ([#3668](https://github.com/kedacore/keda/issues/3668))
 - **General**: Support disable keep http connection alive ([#3874](https://github.com/kedacore/keda/issues/3874))
 - **General**: Support for using pod identities for authentication in Azure Key Vault ([#3813](https://github.com/kedacore/keda/issues/3813))
-- **General**: Support "Restrict Secret Access" to mitigate the security risk ([#3668](https://github.com/kedacore/keda/issues/3668))
 - **Apache Kafka Scaler**: Support for excluding persistent lag ([#3904](https://github.com/kedacore/keda/issues/3904))
 - **Apache Kafka Scaler**: Support for limiting Kafka partitions KEDA will monitor ([#3830](https://github.com/kedacore/keda/issues/3830))
 - **Apache Kafka Scaler**: Support for SASL/OAuth bearer authentication ([#3681](https://github.com/kedacore/keda/issues/3681))
@@ -1108,8 +1107,8 @@ None.
 - **General**: Introduce new AWS DynamoDB Streams Scaler ([#3124](https://github.com/kedacore/keda/issues/3124))
 - **General**: Introduce new NATS JetStream scaler ([#2391](https://github.com/kedacore/keda/issues/2391))
 - **General**: Make propagation policy for ScaledJob rollout configurable ([#2910](https://github.com/kedacore/keda/issues/2910))
-- **General**: Support for Azure AD Workload Identity as a pod identity provider. ([#2487](https://github.com/kedacore/keda/issues/2487)|[#2656](https://github.com/kedacore/keda/issues/2656))
 - **General**: Support for `minReplicaCount` in ScaledJob ([#3426](https://github.com/kedacore/keda/issues/3426))
+- **General**: Support for Azure AD Workload Identity as a pod identity provider. ([#2487](https://github.com/kedacore/keda/issues/2487)|[#2656](https://github.com/kedacore/keda/issues/2656))
 - **General**: Support for permission segregation when using Azure AD Pod / Workload Identity. ([#2656](https://github.com/kedacore/keda/issues/2656))
 - **General**: Support to customize HPA name ([#3057](https://github.com/kedacore/keda/issues/3057))
 - **AWS SQS Queue Scaler**: Support for scaling to include in-flight messages. ([#3133](https://github.com/kedacore/keda/issues/3133))
@@ -1122,8 +1121,8 @@ None.
 
 ### Improvements
 
-- **General**: Add settings for configuring leader election ([#2836](https://github.com/kedacore/keda/issues/2836))
 - **General**: `external` extension reduces connection establishment with long links ([#3193](https://github.com/kedacore/keda/issues/3193))
+- **General**: Add settings for configuring leader election ([#2836](https://github.com/kedacore/keda/issues/2836))
 - **General**: Reference ScaledObject's/ScaledJob's name in the scalers log ([#3419](https://github.com/kedacore/keda/issues/3419))
 - **General**: Use `mili` scale for the returned metrics ([#3135](https://github.com/kedacore/keda/issues/3135))
 - **General**: Use more readable timestamps in KEDA Operator logs ([#3066](https://github.com/kedacore/keda/issues/3066))
@@ -1272,9 +1271,9 @@ None.
 
 ### Improvements
 
+- **General**: `keda-operator` Cluster Role: add `list` and `watch` access to service accounts ([#2406](https://github.com/kedacore/keda/pull/2406))|([#2410](https://github.com/kedacore/keda/pull/2410))
 - **General**: Delete the cache entry when a ScaledObject is deleted ([#2564](https://github.com/kedacore/keda/pull/2564))
 - **General**: Fail fast on `buildScalers` when not able to resolve a secret that a deployment is relying on ([#2394](https://github.com/kedacore/keda/pull/2394))
-- **General**: `keda-operator` Cluster Role: add `list` and `watch` access to service accounts ([#2406](https://github.com/kedacore/keda/pull/2406))|([#2410](https://github.com/kedacore/keda/pull/2410))
 - **General**: Sign KEDA images published on GitHub Container Registry ([#2501](https://github.com/kedacore/keda/pull/2501))|([#2502](https://github.com/kedacore/keda/pull/2502))|([#2504](https://github.com/kedacore/keda/pull/2504))
 - **AWS Scalers**: Support temporary AWS credentials using session tokens ([#2573](https://github.com/kedacore/keda/pull/2573))
 - **AWS SQS Scaler**: Allow using simple queue name instead of URL ([#2483](https://github.com/kedacore/keda/pull/2483))
